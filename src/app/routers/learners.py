@@ -38,13 +38,13 @@ async def get_learners(
 
 # UNCOMMENT AND FILL IN
 #
-# @router.<method>("/<resource_name>", response_model=<resource_schema>, status_code=<status_code>)
-# async def <function_name>(
-#     <param_name>: <request_schema>,
-#     session: AsyncSession = Depends(get_session),
-# ):
-#     """<docstring>"""
-#     return await <db_create_function>(session, name=<param_name>.name, email=<param_name>.email)
+@router.<method>("/<resource_name>", response_model=<resource_schema>, status_code=<status_code>)
+async def <function_name>(
+    <param_name>: <request_schema>,
+    session: AsyncSession = Depends(get_session),
+):
+    """<docstring>"""
+    return await <db_create_function>(session, name=<param_name>.name, email=<param_name>.email)
 #
 # Reference:
 # items POST -> creates a row in items table, accepts ItemCreate, returns Item with status 201
