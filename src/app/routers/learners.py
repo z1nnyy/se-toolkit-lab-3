@@ -24,7 +24,7 @@ async def get_learners(
     enrolled_after: datetime | None = None,
     session: AsyncSession = Depends(get_session),
 ):
-    # """Get all learners, optionally filtered by enrollment date."""
+    """Get all learners, optionally filtered by enrollment date."""
     return await read_learners(session, enrolled_after)
 
 # Reference:
